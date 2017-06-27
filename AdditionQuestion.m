@@ -14,8 +14,8 @@
 {
     self = [super init];
     if (self) {
-          _firstNumber = arc4random_uniform(10)+1;
-          _secondNumber = arc4random_uniform(10)+1;
+          _firstNumber = arc4random_uniform(100)+10;
+          _secondNumber = arc4random_uniform(100)+10;
     }
     return self;
 }

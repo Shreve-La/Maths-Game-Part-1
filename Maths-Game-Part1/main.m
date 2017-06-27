@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "InputHandler.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -24,17 +25,16 @@ int main(int argc, const char * argv[]) {
             NSString *inputStr =  [NSString stringWithCString:inputChars encoding:NSUTF8StringEncoding];
             inputStr = [inputStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
-            if ([inputStr integerValue] == additionQuestion.answer){
-                NSLog(@"Correct-o-mundo!'");
-                additionQuestion.answeredCorrect = YES;
-            }else{
-            NSLog(@"Wrong, the correct answer is: %ld", additionQuestion.answer);
-                additionQuestion.answeredCorrect = NO;
+            if ([inputStr  isEqual: @"q"])
+            {
+                gameOn = NO;
+                NSLog(@"Exiting the program");
+                break;
             }
-        }
-        
-        
-        
+            
+            NSString *result =[InputHandler handleInput:inputStr andQuestion:additionQuestion];
+            NSLog(@"%@", result);
+    }
     }
     return 0;
 }
