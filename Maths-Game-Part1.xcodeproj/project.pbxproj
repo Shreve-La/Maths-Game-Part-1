@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EDBC8CCD1F02AFF600C51D3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBC8CCC1F02AFF600C51D3D /* main.m */; };
+		EDBC8CD51F02C65600C51D3D /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBC8CD41F02C65600C51D3D /* AdditionQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		EDBC8CC91F02AFF600C51D3D /* Maths-Game-Part1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Maths-Game-Part1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBC8CCC1F02AFF600C51D3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EDBC8CD31F02C65600C51D3D /* AdditionQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
+		EDBC8CD41F02C65600C51D3D /* AdditionQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,8 @@
 		EDBC8CC01F02AFF600C51D3D = {
 			isa = PBXGroup;
 			children = (
+				EDBC8CD31F02C65600C51D3D /* AdditionQuestion.h */,
+				EDBC8CD41F02C65600C51D3D /* AdditionQuestion.m */,
 				EDBC8CCB1F02AFF600C51D3D /* Maths-Game-Part1 */,
 				EDBC8CCA1F02AFF600C51D3D /* Products */,
 			);
@@ -121,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDBC8CCD1F02AFF600C51D3D /* main.m in Sources */,
+				EDBC8CD51F02C65600C51D3D /* AdditionQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

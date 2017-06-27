@@ -7,23 +7,30 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdditionQuestion.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL gameOn = YES;
         
         while(gameOn){
-            NSLog(@"Enter Text:");
+            //Generate and ask an addition question
+            AdditionQuestion *additionQuestion = [[AdditionQuestion alloc] init];
+            NSLog(@"What is %@", additionQuestion.question);
             
             //Get User Input
             char inputChars[255];
             fgets(inputChars, 255, stdin);
             NSString *inputStr =  [NSString stringWithCString:inputChars encoding:NSUTF8StringEncoding];
-            NSLog(@"%@", inputStr);
             inputStr = [inputStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-            NSLog(@"%@", inputStr);
-                        
             
+            if ([inputStr integerValue] == additionQuestion.answer){
+                NSLog(@"Correct-o-mundo!'");
+                additionQuestion.answeredCorrect = YES;
+            }else{
+            NSLog(@"Wrong, the correct answer is: %ld", additionQuestion.answer);
+                additionQuestion.answeredCorrect = NO;
+            }
         }
         
         
