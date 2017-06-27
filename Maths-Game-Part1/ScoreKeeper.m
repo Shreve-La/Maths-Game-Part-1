@@ -10,4 +10,11 @@
 
 @implementation ScoreKeeper
 
+-(void)updateScore:(BOOL)correct{
+    if(correct){self.numberRight += 1;}
+    else {self.numberWrong += 1;}
+
+}
+
+
 @end

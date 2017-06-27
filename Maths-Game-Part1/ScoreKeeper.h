@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface ScoreKeeper : NSObject
+@property (assign) NSInteger numberRight;
+@property (assign) NSInteger numberWrong;
+
+-(void)updateScore:(BOOL)correct;
+
 
 @end

@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
+#import "ScoreKeeper.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL gameOn = YES;
+        BOOL correct;
+        ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         
         while(gameOn){
             //Generate and ask an addition question
@@ -33,7 +36,13 @@ int main(int argc, const char * argv[]) {
             }
             
             NSString *result =[InputHandler handleInput:inputStr andQuestion:additionQuestion];
+            if(additionQuestion.answeredCorrect){correct = YES;
+            }else{ correct = NO; }
+            
+            [scoreKeeper updateScore:correct];
             NSLog(@"%@", result);
+            
+            
     }
     }
     return 0;
