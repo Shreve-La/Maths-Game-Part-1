@@ -10,9 +10,11 @@
 
 @implementation ScoreKeeper
 
--(void)updateScore:(BOOL)correct{
+-(NSString*)updateScore:(BOOL)correct{
     if(correct){self.numberRight += 1;}
     else {self.numberWrong += 1;}
+    float percentage = (100 * self.numberRight) / (self.numberRight+self.numberWrong);
+    return [NSString stringWithFormat: @"Right: %ld, Wrong: %ld, Percent %2.f ", self.numberRight, self.numberWrong, percentage];
 
 }
 

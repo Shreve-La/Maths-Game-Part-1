@@ -39,9 +39,9 @@ int main(int argc, const char * argv[]) {
             if(additionQuestion.answeredCorrect){correct = YES;
             }else{ correct = NO; }
             
-            [scoreKeeper updateScore:correct];
             NSLog(@"%@", result);
-            
+            NSString *score = [scoreKeeper updateScore:correct];
+            NSLog(@"%@", score);
             
     }
     }

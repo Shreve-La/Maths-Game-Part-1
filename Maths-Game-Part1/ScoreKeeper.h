@@ -12,7 +12,7 @@
 @property (assign) NSInteger numberRight;
 @property (assign) NSInteger numberWrong;
 
--(void)updateScore:(BOOL)correct;
+-(NSString*)updateScore:(BOOL)correct;
 
 
 @end
