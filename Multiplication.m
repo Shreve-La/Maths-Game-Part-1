@@ -10,4 +10,26 @@
 
 @implementation Multiplication
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self gererateQuestion];
+    }
+    return self;
+}
+
+
+
+
+-(void)gererateQuestion{
+    super.question = [NSString stringWithFormat:@"%ld * %ld = ?", super.firstNumber, super.secondNumber];
+    super.answer = super.firstNumber * super.secondNumber;
+}
+
+
+
+
+
+
 @end

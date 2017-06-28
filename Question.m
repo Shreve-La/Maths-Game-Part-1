@@ -25,10 +25,10 @@
 }
 
 
--(NSString*)question{
-        _question = [NSString stringWithFormat:@"%ld + %ld = ?", self.firstNumber, self.secondNumber];
-    return _question;
-}
+//-(NSString*)question{
+//        _question = [NSString stringWithFormat:@"%ld + %ld = ?", self.firstNumber, self.secondNumber];
+//    return _question;
+//}
 
 -(NSInteger)answer{
         _answer = _firstNumber + _secondNumber;

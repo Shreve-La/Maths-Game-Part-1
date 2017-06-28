@@ -15,6 +15,7 @@
 #import "Subtraction.h"
 #import "Multiplication.h"
 #import "Division.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -22,10 +23,11 @@ int main(int argc, const char * argv[]) {
         BOOL correct;
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         QuestionManager *questionManager = [QuestionManager new];
+        QuestionFactory *questionFactory = [QuestionFactory new];
         
         while(gameOn){
             //Generate and ask an addition question
-            Question *question = [[Addition alloc] init];
+            Question *question = [questionFactory generateRandomQuestion];
             [questionManager.questions addObject:question];
             NSLog(@"What is %@", question.question);
             
