@@ -42,6 +42,9 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", result);
             NSString *score = [scoreKeeper updateScore:correct];
             NSLog(@"%@", score);
+            double timeToAnswer = [additionQuestion answerTime];
+            NSLog(@"Time to answer = %.02f seconds", timeToAnswer);
+            
             
     }
     }

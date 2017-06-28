@@ -33,5 +33,9 @@
         return _answer;
 }
 
+-(double)answerTime{
+    return self.endTime.timeIntervalSinceReferenceDate - self.startTime.timeIntervalSinceReferenceDate;
+}
+
 
 @end

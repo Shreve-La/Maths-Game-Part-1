@@ -18,6 +18,8 @@
 @property (strong, nonatomic) NSDate *startTime;
 @property (strong, nonatomic) NSDate *endTime;
 
+-(double)answerTime;
+
 
 
 @end
