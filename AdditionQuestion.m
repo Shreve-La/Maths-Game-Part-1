@@ -14,25 +14,23 @@
 {
     self = [super init];
     if (self) {
-          _firstNumber = arc4random_uniform(100)+10;
-          _secondNumber = arc4random_uniform(100)+10;
+        _firstNumber = arc4random_uniform(100)+10;
+        _secondNumber = arc4random_uniform(100)+10;
+        _startTime = [NSDate date];
     }
     return self;
 }
 
 
 -(NSString*)question{
-    if(!_question){
         _question = [NSString stringWithFormat:@"%ld + %ld = ?", self.firstNumber, self.secondNumber];
-    }
     return _question;
 }
 
 -(NSInteger)answer{
-    if(!_answer){
         _answer = _firstNumber + _secondNumber;
-    }
-    return _answer;
+        _endTime = [NSDate date];
+        return _answer;
 }
 
 

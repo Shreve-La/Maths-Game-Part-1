@@ -15,5 +15,9 @@
 @property (assign, nonatomic) NSInteger answer;
 @property (nonatomic, strong) NSString *question;
 @property (assign) BOOL answeredCorrect;
+@property (strong, nonatomic) NSDate *startTime;
+@property (strong, nonatomic) NSDate *endTime;
+
+
 
 @end
