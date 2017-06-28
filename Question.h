@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AdditionQuestion : NSObject
+@interface Question : NSObject
 
 @property (assign, nonatomic) NSInteger firstNumber;
 @property (assign, nonatomic) NSInteger secondNumber;
@@ -21,6 +21,7 @@
 
 -(double)answerTime;
 
+-(void)generateQuestion;
 
 
 @end

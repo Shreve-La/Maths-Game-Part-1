@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 
 @interface InputHandler : NSObject
 
 
-+(NSString*)handleInput:(NSString*)usrInput andQuestion:(AdditionQuestion*)additionQuestion;
++(NSString*)handleInput:(NSString*)usrInput andQuestion:(Question*)question;
 
 @end

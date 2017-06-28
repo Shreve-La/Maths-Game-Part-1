@@ -10,16 +10,16 @@
 
 @implementation InputHandler
 
-+(NSString*)handleInput:(NSString*)usrInput andQuestion:(AdditionQuestion*)additionQuestion{
++(NSString*)handleInput:(NSString*)usrInput andQuestion:(Question*)question{
     
-    additionQuestion.userAnswer  = [usrInput integerValue];
+    question.userAnswer  = [usrInput integerValue];
 
-    if (additionQuestion.userAnswer == additionQuestion.answer){
-        additionQuestion.answeredCorrect = YES;
+    if (question.userAnswer == question.answer){
+        question.answeredCorrect = YES;
         return @"Correct!";
 
     }else{
-        additionQuestion.answeredCorrect = NO;
+        question.answeredCorrect = NO;
         return(@"Wrong");
 
     }

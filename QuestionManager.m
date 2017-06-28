@@ -7,7 +7,7 @@
 //
 
 #import "QuestionManager.h"
-#import "AdditionQuestion.h"
+#import "Question.h"
 @implementation QuestionManager
 
 
@@ -27,7 +27,7 @@
     double totalTime = 0;
     double averageTime = 0;
     double totalQuestions = self.questions.count;
-    for (AdditionQuestion* question in self.questions) {
+    for (Question* question in self.questions) {
         totalTime += question.answerTime;
     }
     averageTime = totalTime / totalQuestions;

@@ -1,14 +1,14 @@
 //
-//  AdditionQuestion.m
+//  Question.m
 //  Maths-Game-Part1
 //
 //  Created by swcl on 2017-06-27.
 //  Copyright © 2017 Shreve.ca. All rights reserved.
 //
 
-#import "AdditionQuestion.h"
+#import "Question.h"
 
-@implementation AdditionQuestion
+@implementation Question
 
 - (instancetype)init
 {
@@ -19,6 +19,9 @@
         _startTime = [NSDate date];
     }
     return self;
+}
+
+-(void)generateQuestion {
 }
 
 

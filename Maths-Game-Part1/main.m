@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "Addition.h"
+#import "Subtraction.h"
+#import "Multiplication.h"
+#import "Division.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -21,9 +25,9 @@ int main(int argc, const char * argv[]) {
         
         while(gameOn){
             //Generate and ask an addition question
-            AdditionQuestion *additionQuestion = [[AdditionQuestion alloc] init];
-            [questionManager.questions addObject:additionQuestion];
-            NSLog(@"What is %@", additionQuestion.question);
+            Question *question = [[Addition alloc] init];
+            [questionManager.questions addObject:question];
+            NSLog(@"What is %@", question.question);
             
             //Get User Input
             char inputChars[255];
@@ -38,14 +42,14 @@ int main(int argc, const char * argv[]) {
                 break;
             }
             
-            NSString *result =[InputHandler handleInput:inputStr andQuestion:additionQuestion];
-            if(additionQuestion.answeredCorrect){correct = YES;
+            NSString *result =[InputHandler handleInput:inputStr andQuestion:question];
+            if(question.answeredCorrect){correct = YES;
             }else{ correct = NO; }
             
             NSLog(@"%@", result);
             NSString *score = [scoreKeeper updateScore:correct];
             NSLog(@"%@", score);
-            double timeToAnswer = [additionQuestion answerTime];
+            double timeToAnswer = [question answerTime];
             NSLog(@"Time to answer = %.02f seconds", timeToAnswer);
             NSString* timeStats = [questionManager timeOutput];
             NSLog(@"%@", timeStats);
