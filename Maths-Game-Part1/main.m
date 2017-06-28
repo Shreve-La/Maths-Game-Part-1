@@ -10,16 +10,19 @@
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL gameOn = YES;
         BOOL correct;
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
+        QuestionManager *questionManager = [QuestionManager new];
         
         while(gameOn){
             //Generate and ask an addition question
             AdditionQuestion *additionQuestion = [[AdditionQuestion alloc] init];
+            [questionManager.questions addObject:additionQuestion];
             NSLog(@"What is %@", additionQuestion.question);
             
             //Get User Input
@@ -44,7 +47,8 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", score);
             double timeToAnswer = [additionQuestion answerTime];
             NSLog(@"Time to answer = %.02f seconds", timeToAnswer);
-            
+            NSString* timeStats = [questionManager timeOutput];
+            NSLog(@"%@", timeStats);
             
     }
     }

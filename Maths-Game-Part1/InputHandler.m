@@ -11,10 +11,12 @@
 @implementation InputHandler
 
 +(NSString*)handleInput:(NSString*)usrInput andQuestion:(AdditionQuestion*)additionQuestion{
+    
+    additionQuestion.userAnswer  = [usrInput integerValue];
 
-    if ([usrInput integerValue] == additionQuestion.answer){
+    if (additionQuestion.userAnswer == additionQuestion.answer){
         additionQuestion.answeredCorrect = YES;
-        return @"Correct-o-mundo!'";
+        return @"Correct!";
 
     }else{
         additionQuestion.answeredCorrect = NO;

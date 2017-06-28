@@ -13,6 +13,7 @@
 @property (assign, nonatomic) NSInteger firstNumber;
 @property (assign, nonatomic) NSInteger secondNumber;
 @property (assign, nonatomic) NSInteger answer;
+@property (assign, nonatomic) NSInteger userAnswer;
 @property (nonatomic, strong) NSString *question;
 @property (assign) BOOL answeredCorrect;
 @property (strong, nonatomic) NSDate *startTime;

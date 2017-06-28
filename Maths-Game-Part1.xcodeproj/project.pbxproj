@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED695D431F04224800655029 /* QuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED695D421F04224800655029 /* QuestionManager.m */; };
 		EDBC8CCD1F02AFF600C51D3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBC8CCC1F02AFF600C51D3D /* main.m */; };
 		EDBC8CD51F02C65600C51D3D /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBC8CD41F02C65600C51D3D /* AdditionQuestion.m */; };
 		EDBC8CD81F02D43D00C51D3D /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBC8CD71F02D43D00C51D3D /* InputHandler.m */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED695D411F04224800655029 /* QuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionManager.h; sourceTree = "<group>"; };
+		ED695D421F04224800655029 /* QuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionManager.m; sourceTree = "<group>"; };
 		EDBC8CC91F02AFF600C51D3D /* Maths-Game-Part1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Maths-Game-Part1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBC8CCC1F02AFF600C51D3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDBC8CD31F02C65600C51D3D /* AdditionQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
@@ -50,6 +53,8 @@
 		EDBC8CC01F02AFF600C51D3D = {
 			isa = PBXGroup;
 			children = (
+				ED695D411F04224800655029 /* QuestionManager.h */,
+				ED695D421F04224800655029 /* QuestionManager.m */,
 				EDBC8CD31F02C65600C51D3D /* AdditionQuestion.h */,
 				EDBC8CD41F02C65600C51D3D /* AdditionQuestion.m */,
 				EDBC8CCB1F02AFF600C51D3D /* Maths-Game-Part1 */,
@@ -135,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED695D431F04224800655029 /* QuestionManager.m in Sources */,
 				EDBC8CDB1F02E2BE00C51D3D /* ScoreKeeper.m in Sources */,
 				EDBC8CD81F02D43D00C51D3D /* InputHandler.m in Sources */,
 				EDBC8CCD1F02AFF600C51D3D /* main.m in Sources */,
@@ -269,6 +275,7 @@
 				EDBC8CD21F02AFF600C51D3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
